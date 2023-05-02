@@ -14,43 +14,41 @@ load_dotenv()
 
 
 
-
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(getenv('API_ID'))
-    API_HASH = str(getenv('API_HASH'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN'))
+    API_ID = int(getenv('API_ID', "19455849"))
+    API_HASH = str(getenv('API_HASH', "71498d69fad014add7e9f717bfde4b79"))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', "5338333469:AAHgB-RUICoWn2TGV4P9pe77ZBfD72BZ-1E"))
     name = str(getenv('name', 'filetolinkbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', "-1001620024364"))
     PORT = int(getenv('PORT', 8080))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
-    OWNER_ID = {int(x) for x in os.environ.get("OWNER_ID", "").split()}
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "905710386").split())  
     NO_PORT = bool(getenv('NO_PORT', False))
-    APP_NAME = None
+    APP_NAME = str(getenv('APP_NAME'))
     OWNER_USERNAME = str(getenv('OWNER_USERNAME'))
-    REPLIT_USERNAME = str(getenv('REPLIT_USERNAME'))
-    ON_HEROKU = bool(APP_NAME := getenv('APP_NAME'))
-    FQDN = (
-        str(getenv('FQDN', BIND_ADRESS))
-        if not ON_HEROKU or getenv('FQDN')
-        else f'{APP_NAME}.{REPLIT_USERNAME}.repl.co'
-    )
-    HAS_SSL=bool(getenv('HAS_SSL',False))
-    if ON_HEROKU:
-        URL = f"https://{FQDN}/dl/"
+    if 'DYNO' in environ:
+        ON_HEROKU = True
+        APP_NAME = str(getenv('APP_NAME'))
+    
     else:
-        URL = f'http{"s" if HAS_SSL else ""}://{FQDN}{"" if NO_PORT else f":{PORT}"}/dl/'
-    DATABASE_URL = str(getenv('DATABASE_URL'))
+        ON_HEROKU = False
+    FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
+    FQDN = "streamtesting.herokuapp.com" 
+    HAS_SSL = True
+    HAS_SSL=bool(getenv('HAS_SSL',False))
+    if HAS_SSL:
+        URL = "https://{}/".format(FQDN)
+    else:
+        URL = "https://{}/".format(FQDN)
+    DATABASE_URL = str(getenv('DATABASE_URL', "mongodb+srv://telegram:12345@cluster0.awkybfo.mongodb.net/?retryWrites=true&w=majority"))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
-    BANNED_CHANNELS = list(
-        {
-            int(x)
-            for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()
-        }
-    )
+    BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
+
+
     BOT_USERNAME = str(getenv('BOT_USERNAME'))
     AD1 = str(getenv('AD1', ""))
     AD2 = str(getenv('AD2', ""))
