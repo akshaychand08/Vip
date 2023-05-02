@@ -1,4 +1,3 @@
-
 class InvalidHash(Exception):
     message = "Invalid hash"
 
