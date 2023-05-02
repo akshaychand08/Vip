@@ -10,7 +10,6 @@ from Adarsh import StartTime
 
 START_TEXT = """ Your Telegram DC Is : `{}`  """
 
-
          
 
 
