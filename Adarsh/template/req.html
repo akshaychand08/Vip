@@ -341,6 +341,7 @@
             <script>
               const controls = [
                 "rewind",
+                "audio",
                 "play",
                 "fast-forward",
                 "progress",
@@ -383,6 +384,15 @@
                   >
                     <i class="fa fa-play"></i> Stream VLC
                   </a>
+                  
+                  <a
+                    id="demo2"
+                    href="playit://playerv2/video?url={{src}}&title={{filename}}"
+                    class="block"
+                  >
+                    <i class="fa fa-play"></i> Stream Playit
+                  </a>
+                  
                 </div>
                 <a id="demo3" onclick="showLinkModal('{{src}}')" class="block">
                   <i class="fa fa-download"></i> Download File (open in New Tab)
