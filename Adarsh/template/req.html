@@ -337,9 +337,23 @@
         window.location.href = piUrl;
     }
 
-    function openTgBot() {
-        const createLinkUrl = "https://telegram.dog/";
-        window.open(createLinkUrl, "_blank");
+    function showLinkModal(link) {
+          var modal = document.getElementById("link-modal");
+          var linkElem = document.getElementById("link");
+          linkElem.innerHTML = "";
+          modal.style.display = "block";
+          var seconds = 5;
+          var timerElem = document.getElementById("link-timer");
+          var interval = setInterval(function () {
+            seconds--;
+            timerElem.innerHTML = seconds;
+            if (seconds == 0) {
+              clearInterval(interval);
+              timerElem.innerHTML = "";
+              window.location.href = link;
+              closeLinkModal()
+            }
+          }, 1000);
     }
 
     function openModalTG() {
