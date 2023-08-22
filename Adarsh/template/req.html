@@ -291,9 +291,9 @@
             </button>
         </div>
         </div>
-                <a id="demo3" onclick="showLinkModal('{{src}}')" class="block">
+                <button id="demo3" onclick="showLinkModal('{{src}}')" class="block">
                   <i class="fa fa-download"></i> Download File (open in New Tab)
-                </a>
+                </button>
               </div>
 
               <div id="link-modal" class="modal">
@@ -305,6 +305,16 @@
                   <div>{{ad5}}</div>
                 </div>
               </div>
+              </div>
+
+              {{ ad3 | safe }}
+
+              <div class="alert">
+                <span
+                  class="closebtn"
+                  onclick="this.parentElement.style.display='none';"
+                  >×</span
+                >
         <div id="button-container2">
             <button class="block" id="tg-btn" onclick="openTgBot()">
                 <i class="fab fa-telegram"></i> Create Link Like This
