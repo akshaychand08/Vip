@@ -222,16 +222,45 @@
 </div>
 <div style="margin-bottom: 5px; margin-top: 5px"></div>
 <div class="site-content">
-    <!--
-YOUR ADS
-    -->
-    <div class="playercontainerbox"> 
-        <div id="player-container">
-            <video id="player" playsinline controls>
-                <source src={{file_url}} type="video/mp4">
-            </video>
-        </div>
-    </div>
+    <!--Video Player Start-->
+
+            <div class="container">
+              <video
+                id="myVideo"
+                controls=""
+                src="{{ src }}"
+                width="100%"
+                height="auto"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+            <script>
+              const controls = [
+                "rewind",
+                "audio",
+                "play",
+                "fast-forward",
+                "progress",
+                "current-time",
+                "duration",
+                "captions",
+                "settings",
+                "pip",
+                "airplay",
+                "fullscreen",
+              ];
+              document.addEventListener("DOMContentLoaded", () => {
+                const player = Plyr.setup("#myVideo", {
+                  controls,
+                  adTagUrl:"https://www.videosprofitnetwork.com/watch.xml?key=29654bca221e8261067ac49af92b392b",
+                  skipButton:{enabled: true, text: 'Skip ad', delay: 10}
+                });
+              });
+            </script>
+           
+            <!--Video Player End-->
     <div class="containerbox"> 
         <div id="info-box">
            <p style="font-size: 16px; color:#7b89a3;">File Details :</p>
