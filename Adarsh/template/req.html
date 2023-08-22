@@ -290,11 +290,21 @@
                 <i class="fab fa-telegram"></i> Get as Telegram File
             </button>
         </div>
-        <div id="button-container2">
-            <button id="dl-btn" onclick="openModal()">
-                <i class="fas fa-download"></i> Download Now
-            </button>
         </div>
+                <a id="demo3" onclick="showLinkModal('{{src}}')" class="block">
+                  <i class="fa fa-download"></i> Download File (open in New Tab)
+                </a>
+              </div>
+
+              <div id="link-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeLinkModal()">&times;</span>
+                  <p>The link will be shown in 5 seconds:</p>
+                  <p id="link-timer">5</p>
+                  <p id="link"></p>
+                  <div>{{ad5}}</div>
+                </div>
+              </div>
         <div id="button-container2">
             <button class="block" id="tg-btn" onclick="openTgBot()">
                 <i class="fab fa-telegram"></i> Create Link Like This
