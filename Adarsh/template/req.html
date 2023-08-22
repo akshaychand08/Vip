@@ -295,6 +295,16 @@
                 <i class="fas fa-download"></i> Download Now
             </button>
         </div>
+
+        <div id="link-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeLinkModal()">&times;</span>
+                  <p>The link will be shown in 5 seconds:</p>
+                  <p id="link-timer">5</p>
+                  <p id="link"></p>
+                  <div>{{ad5}}</div>
+                </div>
+        </div>
         <div id="button-container2">
             <button class="block" id="tg-btn" onclick="openTgBot()">
                 <i class="fab fa-telegram"></i> Create Link Like This
