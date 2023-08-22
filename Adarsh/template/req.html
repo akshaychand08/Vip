@@ -285,15 +285,36 @@
             </button>
         </div>
         <div style="margin-bottom: 5px; margin-top: 10px">Download Options :</div>
-        <div id="button-container2">
-            <button id="tgfile-btn" onclick="openModalTG()">
-                <i class="fab fa-telegram"></i> Get as Telegram File
-            </button>
-        </div>
-        </div>
-                <button id="demo3" onclick="showLinkModal('{{src}}')" class="block">
+        <div class="con1">
+              <div id="link-content" class="link_content">
+                <div class="button-area-line">
+                  <a
+                    id="demo2"
+                    href="intent:{{src}}#Intent;package=com.mxtech.videoplayer.ad;S.title={{filename}};end"
+                    class="block"
+                  >
+                    <i class="fa fa-play"></i> Stream MX
+                  </a>
+                  <a
+                    id="demo1"
+                    href="vlc://{{src}}"
+                    class="block"
+                  >
+                    <i class="fa fa-play"></i> Stream VLC
+                  </a>
+                  
+                  <a
+                    id="demo2"
+                    href="playit://playerv2/video?url={{src}}&title={{filename}}"
+                    class="block"
+                  >
+                    <i class="fa fa-play"></i> Stream Playit
+                  </a>
+                  
+                </div>
+                <a id="demo3" onclick="showLinkModal('{{src}}')" class="block">
                   <i class="fa fa-download"></i> Download File (open in New Tab)
-                </button>
+                </a>
               </div>
 
               <div id="link-modal" class="modal">
@@ -304,31 +325,7 @@
                   <p id="link"></p>
                   <div>{{ad5}}</div>
                 </div>
-              </div>
-              </div>
-
-              {{ ad3 | safe }}
-
-              <div class="alert">
-                <span
-                  class="closebtn"
-                  onclick="this.parentElement.style.display='none';"
-                  >×</span
-                >
-        <div id="button-container2">
-            <button class="block" id="tg-btn" onclick="openTgBot()">
-                <i class="fab fa-telegram"></i> Create Link Like This
-            </button>
-            
-            
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.js"></script>
-        <script>
-            const player = new Plyr('#player', {
-                controls: ['play', 'progress', 'rewind', 'fast-forward', 'current-time', 'fullscreen', 'settings']
-            });
-        </script>
-        </div>    
+              </div>    
         <div>
 <script>
     const currentUrl = window.location.href;
