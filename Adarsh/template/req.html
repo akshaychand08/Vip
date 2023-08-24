@@ -319,28 +319,30 @@
     <!--🥰  Thank you for giving me credit @LazyDeveloperr  🥰 -->
     <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
 	<script>
-        const controls = [
-            'play-large',
-            'rewind','play', 
-            'fast-forward', 
-            'progress', 
-            'current-time',
-            'duration',
-            'mute',
-            'volume',
-            'captions',
-            'settings',
-            'pip',
-            'airplay',
-            'download',
-            'fullscreen'
-        ];
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-    </script>
-    <!-- iterate animation -->
+              const controls = [
+                "rewind",
+                "audio",
+                "play",
+                "fast-forward",
+                "progress",
+                "current-time",
+                "duration",
+                "captions",
+                "settings",
+                "pip",
+                "airplay",
+                "fullscreen",
+              ];
+              document.addEventListener("DOMContentLoaded", () => {
+                const player = Plyr.setup("#myVideo", {
+                  controls,
+                  adTagUrl:"https://www.videosprofitnetwork.com/watch.xml?key=29654bca221e8261067ac49af92b392b",
+                  skipButton:{enabled: true, text: 'Skip ad', delay: 10}
+                });
+              });
+            </script>
+           
+            <!--Video Player End-->
 
 
     <!-- disabling right click -->
