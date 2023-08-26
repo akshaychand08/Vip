@@ -118,15 +118,7 @@
 
     <div class="bg-black  text-light"  >
         <!-- file Name -> to be displayed here  -->
-        <div class="justify-content-center align-items-center w-100 d-flex">
-            <div id="file-name" class="tex-center text-lg max:w-74  p-2 flex-wrap text-center justify-center items-center">
-                <p class="fw-bold"> 
-                    <span id="myDiv" class="h6 flex-wrap text-center justify-center items-center card-title wow animate__animated animate__fadeInRight" >
-                        %s
-                    </span>
-                </p>
-            </div>
-        </div>
+        <h4>{{ filename }} - {{file_size}}</h4>
         <!-- Online Video Player -> to be displayed here  -->
         <div class="justify-content-center align-items-center w-100 d-flex  flex-wrap">
             <div class="lg:w-9/12 lg:px-12 lg:py-4 w-full  border border-danger wow animate__animated animate__fadeInLeft">
@@ -145,13 +137,7 @@
         <!-- External video player section -->
             <div class="justify-content-center align-items-center w-100 d-flex">
                     <div class="row d-flex w-100 justify-content-center align-items-center">
-        <div class="containerbox"> 
-        <div id="info-box">
-           <p style="font-size: 16px; color:#7b89a3;">File Details :</p>
-           <p style="font-size: 13px; color:#7b89a3;">Name : {{file_name}}</p>
-           <p style="font-size: 13px; color:#7b89a3;">Size : {{file_size}}</p>
-           <p style="font-size: 13px; color:#7b89a3;">Shared by : ******* (Privacy Enabled)</p>
-	</div>
+        
                         <div class="col-lg-7 col-12 d-flex justify-content-start align-items-center ">
                             <p class="h4 px-2 mt-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-orange-600 font-bold mb-2">Play with...</p>
                         </div>
