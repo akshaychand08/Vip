@@ -18,7 +18,7 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '22301351'))
     API_HASH = str(getenv('API_HASH', '3035f2bbd92a9c5174d174d92b52b25b'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', '6191114829:AAFKgwq5VBKxRuTFp_rNG7Q7m50RLvGxYec'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', '6468117638:AAG7YzsVf3AJybz9YUNVE69IhU34XMNvLzc'))
     name = str(getenv('name', 'Xyz_stream_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
