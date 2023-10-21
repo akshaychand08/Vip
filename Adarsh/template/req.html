@@ -257,21 +257,12 @@ YOUR ADS
         </div>
         <div style="margin-bottom: 5px; margin-top: 10px">Download Options :</div>
         </div>
-	    <div id="button-container2">
-                <a id="dl-btn" onclick="showLinkModal('{{src}}')" class="block">
-                  <i class="fa fa-download"></i> Download File (open in New Tab)
-                </a>
-              </div>
-
-              <div id="link-modal" class="modal">
-                <div class="modal-content">
-                  <span class="close" onclick="closeLinkModal()">&times;</span>
-                  <p>The link will be shown in 5 seconds:</p>
-                  <p id="link-timer">5</p>
-                  <p id="link"></p>
-                  <div>{{ad5}}</div>
-                </div>
-              </div>
+	    </div>
+        <div id="button-container2">
+            <button id="dl-btn" onclick="openModal()">
+                <i class="fas fa-download"></i> Download Now
+            </button>
+	</div>
             
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.js"></script>
