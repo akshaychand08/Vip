@@ -6,7 +6,7 @@
     <link rel="icon" href="https://i.ibb.co/XzCyycV/20230807-211612.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>{{file_name}} / ARS official</title>
+    <title>{{ file_name }} / ARS official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
@@ -265,11 +265,10 @@ YOUR ADS
         </div>
         <div style="margin-bottom: 5px; margin-top: 10px">Download Options :</div>
         </div>
-	    <div id="button-container2">
-            <button id="dl-btn" onclick="showLinkModal('{{src}}')" class="block">
-                <i class="fas fa-download"></i> Download Now
-            </button>
-	    </div>
+	    <div onclick="lazyDownload()" class="col-lg-4 p-2 col-12 rounded-3xl bg-dark text-white text-center align-items-center hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:shadow-md hover:shadow-gray-100 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__rubberBand">
+               Download Now
+          </div>
+       </div>
 	    <center>
     <h2>
         <a href="https://telegram.me/arsOfficial10">
@@ -347,9 +346,9 @@ YOUR ADS
         }, 1000);
     }
 
-    function TGre() {
-        const tglink = "";
-        window.location.href = tglink;
+    function lazyDownload() {
+            const finalLinkUrl = finalUrl;
+            window.location.href = finalLinkUrl;
     }
 
     function openModal() {
