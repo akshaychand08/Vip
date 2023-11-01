@@ -226,9 +226,10 @@
     <!--
 YOUR ADS
     -->
-    <div class="playercontainerbox"> 
-        <div id="player-container">
-            <video
+    <!--Video Player Start-->
+
+            <div class="container">
+              <video
                 id="myVideo"
                 controls=""
                 src="{{ src }}"
@@ -236,8 +237,34 @@ YOUR ADS
                 height="auto"
               >
                 Your browser does not support the video tag.
-	    </video>
-        </div>
+              </video>
+            </div>
+            <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+            <script>
+              const controls = [
+                "rewind",
+                "audio",
+                "play",
+                "fast-forward",
+                "progress",
+                "current-time",
+                "duration",
+                "captions",
+                "settings",
+                "pip",
+                "airplay",
+                "fullscreen",
+              ];
+              document.addEventListener("DOMContentLoaded", () => {
+                const player = Plyr.setup("#myVideo", {
+                  controls,
+                  adTagUrl:"https://www.videosprofitnetwork.com/watch.xml?key=29654bca221e8261067ac49af92b392b",
+                  skipButton:{enabled: true, text: 'Skip ad', delay: 10}
+                });
+              });
+            </script>
+           
+            <!--Video Player End-->
     </div>
 	  <p style="font-size: 7px; color:#f20a0a;">If the screen turns white then your browser is not supporting the video, then you can play it using the Application</p>
     <div class="containerbox"> 
@@ -274,31 +301,8 @@ YOUR ADS
             <img src="https://graph.org/file/b57cdba982191a25db535.jpg" alt="BotszList" width="150" height="75">
         </a>
     </h2>
-            
-        </div>
-        <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
-	<script>
-        const controls = [
-            'play-large',
-            'rewind','play', 
-            'fast-forward', 
-            'progress', 
-            'current-time',
-            'duration',
-            'mute',
-            'volume',
-            'captions',
-            'settings',
-            'pip',
-            'airplay',
-            'download',
-            'fullscreen'
-        ];
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-	</script> 
+     </div>
+        
     const currentUrl = window.location.href;
     const finalUrl = currentUrl.replace("/watch/", "/");
 
