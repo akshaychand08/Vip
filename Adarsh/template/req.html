@@ -6,7 +6,7 @@
     <link rel="icon" href="https://i.ibb.co/XzCyycV/20230807-211612.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title> {{file_name}} ARS official</title>
+    <title> {{ filename }} ARS official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
@@ -276,15 +276,29 @@ YOUR ADS
     </h2>
             
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.js"></script>
-        <script>
-            const player = new Plyr('#player', {
-                controls: ['rewind', 'audio', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'captions', 'settings', 'pip', 'airplay', 'fullscreen']
-            });
-        </script>
-        </div>    
-        <div>
-<script>
+        <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+	<script>
+        const controls = [
+            'play-large',
+            'rewind','play', 
+            'fast-forward', 
+            'progress', 
+            'current-time',
+            'duration',
+            'mute',
+            'volume',
+            'captions',
+            'settings',
+            'pip',
+            'airplay',
+            'download',
+            'fullscreen'
+        ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = Plyr.setup('.player', { controls });
+        });
+
+	</script> 
     const currentUrl = window.location.href;
     const finalUrl = currentUrl.replace("/watch/", "/");
 
