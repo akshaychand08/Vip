@@ -331,82 +331,16 @@ YOUR ADS
         window.location.href = piUrl;
     }
 
-    function openTgBot() {
-        const createLinkUrl = "https://telegram.dog/";
-        window.open(createLinkUrl, "_blank");
-    }
-
-    function openModal() {
-        const modal = document.getElementById("myModal");
-        modal.style.display = "block";
-
-        const words = [
-            "Received File request...✅",
-            "Processing your request...⌛",
-            "Generating your link...🔗",
-            "Sending link to you...🚀",
-            "Redirecting To Telegram...😉"
-        ];
-
-        let index = 0;
-        const timerElement = document.getElementById("timer");
-        timerElement.innerText = words[index];
-
-        const timer = setInterval(() => {
-            index++;
-            if (index < words.length) {
-                timerElement.innerText = words[index];
-            } else {
-                clearInterval(timer);
-                TGre();
-                modal.style.display = "none";
-            }
-        }, 1000);
-    }
-
     function lazyDownload() {
             const finalLinkUrl = finalUrl;
             window.location.href = finalLinkUrl;
     }
-
-    function openModal() {
-        const modal = document.getElementById("myModal");
-        modal.style.display = "block";
-
-        const words = [
-            "Received Download request...✅",
-            "Processing your request...⌛",
-            "Generating your link...🔗",
-            "Sending link to you...🚀",
-            "Download has started...😉"
-        ];
-
-        let index = 0;
-        const timerElement = document.getElementById("timer");
-        timerElement.innerText = words[index];
-
-        const timer = setInterval(() => {
-            index++;
-            if (index < words.length) {
-                timerElement.innerText = words[index];
-            } else {
-                clearInterval(timer);
-                download();
-                modal.style.display = "none";
-            }
-        }, 1000);
-    }
-
-    function download() {
-        const finalLinkUrl = finalUrl;
-        window.location.href = finalLinkUrl;
-    }
 </script>
-<script>
-    document.addEventListener('contextmenu', function (e) {
+ <!-- disabling right click -->
+    <script>
+        document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
     });
-
     document.addEventListener('keydown', function (e) {
         if (
             e.key === 'F12' ||
@@ -419,21 +353,15 @@ YOUR ADS
             e.preventDefault();
         }
     });
-</script>
-       <!-- <div>
-          <center>
-
-YOUR ADS 
-
-          </center>  --> 
-<footer>
-        <p style="font-size: 9px; color:#7b89a3;padding-top: 30px ;margin:0px 10px; border-top: 1px solid #c2cee3;">
-      This website only provide service that help you convert your Telegram File to Online Streaming.
-      You can report the file/video that contains a problem like copyright, 18+, violence, et. Report <a href="https://telegram.dog/iPapdiscussion" style="color: darkorange"><b>Here</b></a>
-      <p style="text-align:center">&copy; ARS official</p>
-	<!--
-      YOUR ADS 
-      -->
+    </script> 
+©  <script type="text/JavaScript">
+                var theDate=new Date() 
+                    document.write(theDate.getFullYear()) 
+            </script> Copyright :
+                <a class="bg-clip-text text-[16px] text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-bold tracking-wide px-1" href="https://telegram.me/AkshayChand08">ARS official</a>
+                <!--🥰  Thank you for giving me credit @LazyDeveloperr  🥰 -->
+                All right reserved
+            </div>   
 </footer>    
 </body>
 </html>
