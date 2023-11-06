@@ -41,9 +41,9 @@ class Var(object):
     #HAS_SSL = True
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
-        URL = "www{}/".format(FQDN)
+        URL = "https://{}/".format(FQDN)
     else:
-        URL = "www{}/".format(FQDN)
+        URL = "https://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://TGBOT:TGBOT@cluster0.fgr7vqt.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001950779965")).split())) 
