@@ -69,7 +69,7 @@ async def private_receive_handler(c: Client, m: Message):
         user = await db.get_user(m.from_user.id)
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
 
-        og_stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+        og_stream_link = f"{Var.URL}watch/{get_hash(log_msg)}{log_msg.id}"
         stream_link = await short_link(og_stream_link, user)
 
         og_online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
