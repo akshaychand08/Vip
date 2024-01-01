@@ -22,7 +22,7 @@ class Var(object):
     name = str(getenv('name', 'Xyz_stream_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002116661148'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002108978238'))
     PORT = int(getenv('PORT', 8000))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
