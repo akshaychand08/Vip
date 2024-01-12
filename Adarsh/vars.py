@@ -18,11 +18,11 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '22301351'))
     API_HASH = str(getenv('API_HASH', '3035f2bbd92a9c5174d174d92b52b25b'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', '6840063368:AAGs0Yd9bg6i9WmhL-hvym1gOxMqGDXi278'))
-    name = str(getenv('name', 'Testing_xyz_01bot'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', '6191114829:AAHzhYpMf4QTSYTMUN_30c-yfgPGDER1pdg'))
+    name = str(getenv('name', 'Xyz_stream_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002116661148'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002108978238'))
     PORT = int(getenv('PORT', 8000))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
@@ -50,18 +50,4 @@ class Var(object):
 
 
 
-    BOT_USERNAME = str(getenv('BOT_USERNAME'))
-    AD1 = str(getenv('AD1', ""))
-    AD2 = str(getenv('AD2', ""))
-    AD3 = str(getenv('AD3', ""))
-    AD4 = str(getenv('AD4', ""))
-    AD5 = str(getenv('AD5', ""))
-    AD6 = str(getenv('AD6', ""))
-    USERS_CAN_USE = getenv('USERS_CAN_USE', True)
-    ADMINS = (
-        [int(i.strip()) for i in os.environ.get("ADMINS").split(",")]
-        if os.environ.get("ADMINS")
-        else []
-    )
-    IS_DISPLAY_DL_LINK = getenv('IS_DISPLAY_DL_LINK', False)
-    VIDEO_AD = getenv('VIDEO_AD', "")
+    
