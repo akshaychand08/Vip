@@ -1,5 +1,4 @@
-# (c) @adarsh-goel
-
+# (c) @nobideveloper
 import os
 import time
 import string
@@ -19,12 +18,12 @@ Broadcast_IDs = {}
 @StreamBot.on_message(filters.command("users") & filters.private )
 async def sts(c: Client, m: Message):
     user_id=m.from_user.id
-    if user_id in Var.ADMINS:
+    if user_id in Var.OWNER_ID:
         total_users = await db.total_users_count()
         await m.reply_text(text=f"Total Users in DB: {total_users}", quote=True)
         
         
-@StreamBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.ADMINS)))
+@StreamBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.OWNER_ID)))
 async def broadcast_(c, m):
     user_id=m.from_user.id
     out = await m.reply_text(
