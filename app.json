@@ -1,6 +1,6 @@
 {
-  "name": "Adersh-",
-  "description": "A Pyrogram Telegram bot to Stream Telegram files to web. @adarshgoel",
+  "name": "Nobita",
+  "description": "A Pyrogram Telegram bot to Stream Telegram files to web.",
   "keywords": [
       "telegram",
       "stream",
@@ -13,10 +13,10 @@
       "media",
       "bot"
     ],
-  "repository": "https://github.com/adarsh-goel/-pro/",
+  "repository": "https://github.com/NobiDeveloper/Nobita-Stream-Bot",
   "success_url": "/",
   "logo": "https://i.ibb.co/MnMZ1Sy/download-1.jpg",
-  "website": "http://adarsh.eu.org",
+  "website": "http://youtube.com/@nobideveloper",
   "env": {
       "ENV": {
           "description": "Set this to True if you don't want to crash the bot",
@@ -39,10 +39,10 @@
           
       },
       "DATABASE_URL": {
-          "description": "MongoDB URI for saving User IDs when they first Start the Bot. We will use that for Broadcasting to them. I will try to add more features related with Database. If you need help search for a tutorial on youtbe"
+          "description": "Enter your MongoDB Database"
       },
       "OWNER_ID": {
-          "description": "Your Telegram User ID  like 1234509"
+          "description": "Your Telegram User ID"
       },
       "BANNED_CHANNELS": {
           "description": "Put IDs of Banned Channels where bot will not work. You can add multiple IDs & separate with Space.",
@@ -55,7 +55,7 @@
           
       },
       "OWNER_USERNAME": {
-          "description": "Enter your username without @  example  adarsh."
+          "description": "Enter your username without @  example  nobideveloper"
       },
       "SLEEP_THRESHOLD": {
           "description": "Floodwait Sleep timer. Read the readme for more info about this var",
@@ -94,8 +94,8 @@
           "required": false
       },
       "name": {
-          "description": " Session Name for Bot [ Add adarsh-goel]",
-          "value": "File-To-Link",
+          "description": " Session Name for Bot [ Add nobideveloper]",
+          "value": "Nobita-Stream-Bot",
           "required": false
       }
   },
@@ -105,7 +105,7 @@
   "formation": {
       "web": {
           "quantity": 1,
-          "size": "eco"
+          "size": "free"
       }
   }
 }
