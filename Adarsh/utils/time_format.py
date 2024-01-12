@@ -1,4 +1,4 @@
-# (c) adarsh-goel
+# (c) NobiDeveloper
 # Bot Uptime
 
 def get_readable_time(seconds: int) -> str:
@@ -23,4 +23,3 @@ def get_readable_time(seconds: int) -> str:
     time_list.reverse()
     readable_time += ": ".join(time_list)
     return readable_time 
-

@@ -4,6 +4,7 @@ import aiohttp
 import traceback
 from Adarsh.vars import Var
 
+
 async def ping_server():
     sleep_time = Var.PING_INTERVAL
     while True:
