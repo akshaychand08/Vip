@@ -1,5 +1,4 @@
-# (c) adarsh-goel
-
+# (c) NobiDeveloper
 from pyrogram import Client
 import pyromod.listen
 from ..vars import Var

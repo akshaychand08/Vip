@@ -1,4 +1,4 @@
-# (c) adarsh goel
+# (c) NobiDeveloper
 
 import asyncio
 import logging
